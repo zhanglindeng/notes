@@ -6,3 +6,4 @@
 ### [angular2-tutorial](https://github.com/lewis617/angular2-tutorial.git)
 ### [urlooker](https://github.com/710leo/urlooker.git)
 ### [angular2-example-code](https://github.com/angularjs-de/angular2-tutorial.git)
+### [primeng](https://github.com/primefaces/primeng.git)
