@@ -9,3 +9,7 @@
 ### [primeng](https://github.com/primefaces/primeng.git)
 ### [h-ui](https://github.com/jackying/h-ui.git)
 ### [h-ui.admin](http://www.h-ui.net/H-ui.admin.shtml)
+
+## npm 安装使用淘宝镜像
+
+`npm install --registry=https://registry.npm.taobao.org`
