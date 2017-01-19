@@ -1,6 +1,7 @@
 # git
 
 - 打包 `git archive --format zip --output /path/to/file.zip master # 将 master 以zip格式打包到指定文件`
+- 新建tag `git tag -a v1.4 -m "version 1.4"`
 
 ### 初始化
 - 设置用户名和邮箱
