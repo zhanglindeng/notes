@@ -5,3 +5,5 @@
 `<input type="file" accept="image/gif,image/jpeg,image/jpg,image/png,image/svg">`
 
 参考网页 [http://www.dengzhr.com/frontend/1059](http://www.dengzhr.com/frontend/1059)
+
+### [移动端视频播放](http://www.xuanfengge.com/html5-video-play.html)
