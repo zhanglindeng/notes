@@ -9,3 +9,5 @@
 - [css3 loading](http://www.html5tricks.com/demo/css3-robot-loading-animation/index2.html)
 
 - [vue modal](https://jsfiddle.net/yyx990803/msx42stu)
+
+- 中文正則 `/^[\u4e00-\u9fa5]+$/`
