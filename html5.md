@@ -7,3 +7,4 @@
 参考网页 [http://www.dengzhr.com/frontend/1059](http://www.dengzhr.com/frontend/1059)
 
 ### [移动端视频播放](http://www.xuanfengge.com/html5-video-play.html)
+- [autoplay](http://stackoverflow.com/questions/20499341/html5-video-autoplay-on-mobile-browser)
