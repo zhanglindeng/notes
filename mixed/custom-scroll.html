@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="public/static/css/bootstrap.min.css">
+    <style>
+        .box {
+            width: 400px;
+            height: 600px;
+            background-color: #9d9d9d;
+            margin-top: 20px;
+            margin-left: 10px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .box .scroll-bar {
+            position: absolute;
+            width: 6px;
+            background-color: #333;
+            border-radius: 3px;
+            /*display: none;*/
+            right: 2px;
+            z-index: 100;
+        }
+
+        .box ul {
+            position: absolute;
+            margin-bottom: 0;
+            padding-left: 0;
+            left: 0;
+            right: 0;
+            z-index: 99;
+        }
+
+        .box ul li {
+            height: 100px;
+            background-color: #0b6685;
+            border-bottom: 2px solid #fff;
+            list-style: none;
+        }
+
+        .box ul li:last-child {
+            border-bottom: none;
+        }
+    </style>
+</head>
+<body>
+
+<div class="box" id="box">
+    <div id="scroll-bar" class="scroll-bar"></div>
+    <ul id="list-container">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+    </ul>
+</div>
+
+
+<script src="public/static/js/jquery.min.js"></script>
+<script>
+    function boxMouseWheel(e) {
+        e = e || window.event;
+        var ul = document.getElementById('list-container');
+        var $ul = $(ul);
+        var number = $ul.find('li').length + 1;
+        var top = 0;
+        var topStr = ul.style.top;
+        var height = $ul.height() - $('#box').height();
+        console.log(topStr);
+        if (topStr != '') {
+            // console.log(ul.style.top.substr(0, topStr.length - 2), 'substr');
+            top = parseInt(ul.style.top.substr(0, topStr.length - 2)) || 0;
+            top = Math.abs(top);
+        }
+
+        // 计算 滚动条高度
+        var boxHeight = $('#box').height();
+        var listHeight = $('#list-container').height();
+        var showScroll = false;
+        var scrollBar = document.getElementById('scroll-bar');
+        // var $scrollBar = $(scrollBar);
+        var scrollTop = 0;
+        if (boxHeight < listHeight) {
+            showScroll = true;
+            var scrollHeight = boxHeight / (listHeight / boxHeight);//高度
+            scrollTop = Math.floor(boxHeight * (top / listHeight));//偏移距离
+        }
+        if (scrollTop <= 10) {
+            scrollTop = 0;
+        }
+
+        console.log(height, top, scrollTop);
+        if (e.wheelDelta) {// ie,chrome,edge
+            if (e.wheelDelta > 0 && top <= height) {//上
+                console.log('上');
+                ul.style.top = (-(top + 100)) + 'px';
+
+                // 到底部发起http请求，加载更多
+                if (height < 5000) {
+                    $ul.append('<li>' + number + '</li>');
+                }
+
+                if (showScroll) {
+                    scrollBar.style.height = scrollHeight + 'px';
+                    scrollBar.style.top = scrollTop + 'px';
+                }
+            }
+            if (e.wheelDelta < 0 && top > 0) {//下
+                // console.log('下');
+                ul.style.top = (-(top - 100)) + 'px';
+
+                if (showScroll) {
+                    scrollBar.style.height = scrollHeight + 'px';
+                    scrollBar.style.top = scrollTop + 'px';
+                }
+            }
+        } else if (e.detail) {  //Firefox滑轮事件
+            if (e.detail > 0) { //当滑轮向上滚动时
+                console.log('> 0')
+            }
+            if (e.detail < 0) { //当滑轮向下滚动时
+                console.log('< 0')
+            }
+        }
+    }
+    if (document.addEventListener) {//firefox
+        document.addEventListener('DOMMouseScroll', boxMouseWheel, false);
+    }
+    $(function () {
+        // $('#box').on('mousewheel', boxMouseWheel);
+        document.getElementById('box').onmousewheel = boxMouseWheel;
+    });
+</script>
+</body>
+</html>
