@@ -17,3 +17,6 @@
 
 ## 下載 youtube 視頻
 [http://www.clipconverter.cc/](http://www.clipconverter.cc/)
+
+## Github Chrome 插件
+[segmentfault](https://segmentfault.com/p/1210000008310511?utm_source=weekly&utm_medium=email&utm_campaign=email_weekly)
