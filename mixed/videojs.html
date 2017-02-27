@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+	<meta charset="utf-8">
+	<title>videojs</title>
+	<link rel="stylesheet" href="video-js.min.css">
+</head>
+<!--http://www.bubuko.com/infodetail-483875.html-->
+<!--https://github.com/videojs/video.js-->
+<body>
+	<video id="my-video" class="video-js" width="640" height="264" src="oceans.mp4">
+		<!--<source src="oceans.mp4" type='video/mp4'>-->
+	</video>
+	<button onclick="play()">play</button>
+	<button onclick="pausePlay()">pause</button>
+	<script src="video.min.js"></script>
+	<script>
+		var vidoes = [
+			'oceans.mp4',
+			'test.mp4',
+		];
+		var player = videojs('my-video', {} , function onPlayerReady() {
+			videojs.log('Your player is ready!');
+			// this.play();
+			this.on('play', function() {
+				console.log('play');
+			});
+			this.on('ended', function() {
+				console.log('ended');
+				player.src(vidoes[1]);
+				play();
+			});
+			this.on('pause', function() {
+				console.log('pause');
+			});
+		});
+		// console.log('player', player.src(vidoes[0]));
+		function pausePlay() {
+			player.pause();
+		}
+		function play() {
+			player.play();
+		}
+	</script>
+</body>
+
+</html>
