@@ -20,3 +20,6 @@
 
 ## Github Chrome 插件
 [segmentfault](https://segmentfault.com/p/1210000008310511?utm_source=weekly&utm_medium=email&utm_campaign=email_weekly)
+
+## Windows
+- 建立軟鏈接 `mklink`
