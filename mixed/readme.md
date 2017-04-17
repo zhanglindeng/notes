@@ -13,3 +13,5 @@
 - 中文正則 `/^[\u4e00-\u9fa5]+$/`
 
 - [https证书](https://letsencrypt.org/)
+
+- [查看监听的事件 getEventListeners(ele)](https://segmentfault.com/q/1010000000446492)
