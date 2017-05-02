@@ -12,3 +12,11 @@
 - mysql -uroot -p
 - ALTER USER 'root'@'localhost' IDENTIFIED BY 'MyNewPass4!';
 - sudo yum list installed | grep "^mysql"
+
+### utf8mb4
+- 使用utf8mb4代替utf8
+- utf8最多是3个字节，utf8mb4最多是4个字节
+- utf8mb4可以支持更多的字符，如：Emoji表情，不常用的汉字
+- mb4 的意思是：most bytes 4
+- 5.5.3以后的版本才支持(select version();)
+- 可以使用varchar代替char
