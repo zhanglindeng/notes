@@ -10,6 +10,7 @@
 ### [h-ui](https://github.com/jackying/h-ui.git)
 ### [h-ui.admin](http://www.h-ui.net/H-ui.admin.shtml)
 ### [TWBScolor](http://work.smarchal.com/twbscolor/)
+### [js php](https://github.com/kvz/locutus)
 
 ## npm 安装使用淘宝镜像
 
