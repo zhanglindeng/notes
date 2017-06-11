@@ -23,3 +23,14 @@
 
 ### create database
 - `create database if not exists dbname default charset utf8mb4 collate utf8mb4_unicode_ci`
+
+### create table
+```sql
+create table if not exists users (
+  id int(10) auto_increment,
+  email varchar(128) null,
+  password varchar(255) null,
+  primary key(id),
+  unique key users_unique_email(email)
+)engine=InnoDB default charset utf8mb4 collate utf8mb4_unicode_ci;
+```
