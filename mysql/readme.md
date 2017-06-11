@@ -20,3 +20,6 @@
 - mb4 的意思是：most bytes 4
 - 5.5.3以后的版本才支持(select version();)
 - 可以使用varchar代替char
+
+### create database
+- `create database if not exists dbname default charset utf8mb4 collate utf8mb4_unicode_ci`
