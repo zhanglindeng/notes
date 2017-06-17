@@ -52,4 +52,7 @@ default-time_zone = '+8:00'
 select now();
 ```
 
+### 重启
+`/etc/init.d/mysql restart|start|stop`
+
 
