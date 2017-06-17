@@ -34,3 +34,22 @@ create table if not exists users (
   unique key users_unique_email(email)
 )engine=InnoDB default charset utf8mb4 collate utf8mb4_unicode_ci;
 ```
+
+### 设置时区
+```sql
+# 全局
+set global time_zone = '+8:00'
+# 当前
+set time_zone = '+8:00'
+# 立即生效
+flush privileges;
+
+# 配置文件
+[mysqld]
+default-time_zone = '+8:00'
+
+# 查看时间
+select now();
+```
+
+
