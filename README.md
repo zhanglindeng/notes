@@ -25,3 +25,12 @@
 
 ## Windows
 - 建立軟鏈接 `mklink`
+
+## apache
+
+### `.htaccess`
+- 禁止访问 `.git` 目录
+```apacheconfig
+RewriteEngine On
+RewriteRule ^.git - [F,L]
+```
