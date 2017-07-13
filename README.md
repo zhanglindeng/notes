@@ -14,6 +14,7 @@
 ### [uikit](https://github.com/uikit/uikit)
 ### [SSH](https://www.ibm.com/developerworks/cn/linux/l-cn-sshforward/)
 ### [PHP开发者实践](https://ryancao.gitbooks.io/php-developer-prepares/content/)
+### [webshell](http://www.cnblogs.com/LittleHann/p/3522990.html)
 
 ## npm 安装使用淘宝镜像
 
