@@ -16,6 +16,7 @@
 ### [PHP开发者实践](https://ryancao.gitbooks.io/php-developer-prepares/content/)
 ### [webshell](http://www.cnblogs.com/LittleHann/p/3522990.html)
 ### [githuber](https://githuber.cn)
+### [mingw-w64](https://sourceforge.net/projects/mingw-w64/files/Toolchains%20targetting%20Win64/Personal%20Builds/mingw-builds/7.1.0/threads-posix/seh/)
 
 ## npm 安装使用淘宝镜像
 
