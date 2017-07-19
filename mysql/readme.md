@@ -1,5 +1,8 @@
 # MySQL
 
+### MySQL 5.7 主从配置
+- [CSDN](http://blog.csdn.net/lysc_forever/article/details/52216929)
+
 ### CentOS 7 安装 MySQL
 - [参考网页](https://dev.mysql.com/doc/mysql-yum-repo-quick-guide/en/)
 - sudo rpm -Uvh mysql57-community-release-el6-n.noarch.rpm
