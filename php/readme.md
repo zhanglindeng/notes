@@ -1,3 +1,13 @@
+### PHP-CS
+- [http://cs.sensiolabs.org/](http://cs.sensiolabs.org/)
+- [php-cs-fixer](https://packagist.org/packages/friendsofphp/php-cs-fixer)
+- [PHP_CodeSniffer](https://github.com/squizlabs/PHP_CodeSniffer)
+
+### PHPMD
+- [https://phpmd.org/](https://phpmd.org/)
+- [https://github.com/overtrue/phpmd-rulesets](https://github.com/overtrue/phpmd-rulesets)
+- [phpmd](https://github.com/manuelpichler/phpmd)
+
 ### [webtatic](https://webtatic.com/packages/php56/)
 
 ### error handler
