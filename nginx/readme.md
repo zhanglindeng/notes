@@ -1,3 +1,10 @@
+### 最大请求大小
+```
+Syntax:	client_max_body_size size;
+Default: client_max_body_size 1m;
+Context: http, server, location
+```
+
 ### 负载均衡（轮询）
 ```
 upstream test {
