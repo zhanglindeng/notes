@@ -20,5 +20,5 @@ $ timedatectl set-local-rtc 1
 
 设置系统时区为上海
 ```
-$ sudo timedatectl Asia/Shanghai
+$ sudo timedatectl set-timezone Asia/Shanghai
 ```
