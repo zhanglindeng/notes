@@ -1,5 +1,11 @@
 # MySQL
 
+### 修改MySQL的root账号密码
+```
+alert user 'root'@'localhost' identified by 'newPaSS4!';
+```
+
+
 ### MySQL 5.7 主从配置
 - [CSDN](http://blog.csdn.net/lysc_forever/article/details/52216929)
 
