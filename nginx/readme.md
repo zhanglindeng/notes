@@ -1,3 +1,8 @@
+### [速率限制](https://www.nginx.com/blog/rate-limiting-nginx/)
+- `limit_req_zone`
+- `limit_req`
+
+
 ### 最大请求大小
 ```
 Syntax:	client_max_body_size size;
