@@ -1,3 +1,5 @@
+### [nginx GeoIP](http://blog.topspeedsnail.com/archives/7410)
+
 ### [速率限制](https://www.nginx.com/blog/rate-limiting-nginx/)
 - `limit_req_zone`
 - `limit_req`
