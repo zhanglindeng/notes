@@ -1,5 +1,19 @@
 # MySQL
 
+### 新建USER和授权
+
+- 用户名：`wechat_dev`
+- 密码：`wechat_dev`
+- 数据库：`wechat_dev`
+
+```sql
+CREATE USER 'wechat_dev'@'%' IDENTIFIED BY 'wechat_dev';
+
+GRANT SELECT, INSERT, UPDATE, REFERENCES, DELETE, CREATE, DROP, ALTER, INDEX, TRIGGER, CREATE VIEW, SHOW VIEW, EXECUTE, ALTER ROUTINE, CREATE ROUTINE, CREATE TEMPORARY TABLES, LOCK TABLES, EVENT ON `wechat\_dev`.* TO 'wechat_dev'@'%';
+
+GRANT GRANT OPTION ON `wechat\_dev`.* TO 'wechat_dev'@'%';
+```
+
 ### 修改MySQL的root账号密码
 ```
 alert user 'root'@'localhost' identified by 'newPaSS4!';
