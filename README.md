@@ -1,5 +1,6 @@
 # notes
 
+### [git-flight-rule](https://github.com/k88hudson/git-flight-rules)
 ### [chuangzaoshi](http://chuangzaoshi.com/)
 ### [image rotate](http://blog.csdn.net/songzitea/article/details/51043743)
 ### [www.toptal.com](https://www.toptal.com/designers/subtlepatterns/submit/)
