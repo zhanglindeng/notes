@@ -49,3 +49,11 @@
 RewriteEngine On
 RewriteRule ^.git - [F,L]
 ```
+
+## git 
+
+### 记住密码
+```
+git config --global credential.helper store
+```
+
