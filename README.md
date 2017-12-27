@@ -1,5 +1,6 @@
 # notes
 
+### [2018 PHP secure guide](https://paragonie.com/blog/2017/12/2018-guide-building-secure-php-software)
 ### [git-flight-rule](https://github.com/k88hudson/git-flight-rules)
 ### [chuangzaoshi](http://chuangzaoshi.com/)
 ### [image rotate](http://blog.csdn.net/songzitea/article/details/51043743)
