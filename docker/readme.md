@@ -1,5 +1,8 @@
 # docker
 
+### 私有仓库
+[参考网页](https://www.cnblogs.com/fengzheng/p/5168951.html)
+
 ### ngixn proxy https => http
 ```php
 if (!function_exists('asset_url')) {
