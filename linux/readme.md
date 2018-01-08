@@ -12,3 +12,8 @@
 - `uname -r`
 - `uname -a`
 - `cat /proc/version`
+
+### ubuntu 修改时区
+```
+dpkg-reconfigure tzdata
+```
