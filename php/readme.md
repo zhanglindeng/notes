@@ -23,3 +23,8 @@
 
 ### header
 - header_list()
+
+### Log Level
+```
+严重程度的级别，从低到高为: debug、 info、notice、 warning、error、critical、alert、emergency
+```
