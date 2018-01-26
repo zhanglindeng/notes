@@ -1,3 +1,10 @@
+### 隐藏版本号
+```
+http {
+   server_tokens off;
+}
+```
+
 ### [nginx GeoIP](http://blog.topspeedsnail.com/archives/7410)
 
 ### [速率限制](https://www.nginx.com/blog/rate-limiting-nginx/)
