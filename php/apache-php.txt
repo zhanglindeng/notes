@@ -1,0 +1,75 @@
+配置 ServerRoot
+ServerRoot "D:/webserver/httpd-2.4.29-Win64-VC15/Apache24"
+
+可以这样用
+定义：Define INSTALL_DIR D:/wamp64
+使用：${INSTALL_DIR}
+
+配置 ServerName
+ServerName localhost
+
+配置 DocumentRoot
+DocumentRoot "D:/webserver/httpd-2.4.29-Win64-VC15/Apache24/htdocs"
+
+配置 ScriptAlias
+ScriptAlias /cgi-bin/ "D:/webserver/httpd-2.4.29-Win64-VC15/Apache24/cgi-bin/"
+
+更改 httpd 的端口
+#Listen 12.34.56.78:80
+Listen 10080
+
+启用 rewrite 模块
+LoadModule rewrite_module modules/mod_rewrite.so
+	
+加载 httpd-vhosts.conf 配置文件
+# Virtual hosts
+Include conf/extra/httpd-vhosts.conf
+
+配置 PHP
+如果是 PHP 5.x，把 php7_module 改为 php5_module 
+LoadModule php7_module "D:/php/php-7.1.12-Win32-VC14-x64/php7apache2_4.dll"
+AddHandler application/x-httpd-php .php
+AddType application/x-httpd-php .php .html .htm
+PHPIniDir "D:/php/php-7.1.12-Win32-VC14-x64"
+
+配置 index 文件
+<IfModule dir_module>
+    DirectoryIndex index.html index.php
+</IfModule>
+
+
+从 PHP 目录复制文件到 apache bin 目录
+1.icu开头的 dll
+2.libeay32.dll
+3.libpq.dzll
+4.libsasl.dll
+5.libssh2.dll
+6.ssleay32.dll
+7.php5ts.dll
+
+这里复制的我文件我也不清楚啦，从 wamp 模仿过来的
+
+
+httpd 命令使用帮助
+
+httpd -h
+
+可以查看如何启用停止 httpd 服务和安装 windows service (需要系统管理员权限)
+
+虚拟主机配置
+<VirtualHost *:8080>
+	ServerName dev.abc.localhost
+	ErrorLog "D:/webserver/httpd-2.4.29-Win64-VC15-PHP5.6/Apache24/logs/dev.abc.localhost.error.log"
+	CustomLog "D:/webserver/httpd-2.4.29-Win64-VC15-PHP5.6/Apache24/logs/dev.abc.localhost.access.log" common
+	DocumentRoot "D:/projects/php/abc/public"
+	<Directory  "D:/projects/php/abc/public/">
+		Options FollowSymLinks
+		AllowOverride All
+		Require all granted
+	</Directory>
+</VirtualHost>
+
+注意事项
+PHP 扩展目录写全路径
+
+
