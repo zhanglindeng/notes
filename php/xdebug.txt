@@ -1,0 +1,12 @@
+
+# 在 apache 中配置了虚拟主机的话，有时要指定 xdebug.remote_host = 127.0.0.1
+[xdebug]
+zend_extension = "D:/php/php-7.0.28-Win32-VC14-x64/ext/php_xdebug-2.6.0-7.0-vc14-x86_64.dll"
+xdebug.remote_enable = on
+xdebug.remote_host = 127.0.0.1
+xdebug.remote_port = 9090
+xdebug.profiler_enable = off
+xdebug.profiler_enable_trigger = on
+xdebug.profiler_output_name = cachegrind.out.%t.%p
+xdebug.profiler_output_dir = "D:/php/temp/xdebug70"
+xdebug.show_local_vars = 0
