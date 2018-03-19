@@ -66,6 +66,7 @@ httpd -h
 		Options FollowSymLinks
 		AllowOverride All
 		Require all granted
+		DirectoryIndex index.html index.php
 	</Directory>
 </VirtualHost>
 
