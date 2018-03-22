@@ -1,3 +1,8 @@
+### 查找杀死进程
+```
+pgrep <name> | xargs kill -s 9
+```
+
 ### 结束进程
 - `kill -s 9 <pid>`
 
