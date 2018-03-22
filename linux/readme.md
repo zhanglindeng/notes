@@ -1,3 +1,8 @@
+### 根据进程名杀死进程
+```
+pkill -f "process_name_pattern"
+```
+
 ### 查找杀死进程
 ```
 pgrep <name> | xargs kill -s 9
