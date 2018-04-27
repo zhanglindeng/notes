@@ -1,3 +1,6 @@
+### Ubuntu 开启 BBR
+[参考网址](https://www.cnblogs.com/binarization/p/6421877.html)
+
 ### 根据进程名杀死进程
 ```
 pkill -f "process_name_pattern"
