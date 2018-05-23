@@ -1,3 +1,8 @@
+### 防止 SSH 被暴力破解
+```
+denyhosts
+```
+
 ### Ubuntu 开启 BBR
 [参考网址](https://www.cnblogs.com/binarization/p/6421877.html)
 
