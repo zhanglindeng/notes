@@ -1,5 +1,6 @@
 # notes
 
+### [laravel qrcode](https://www.simplesoftware.io/docs/simple-qrcode/zh)
 ### [send.firefox.com](https://send.firefox.com/)
 ### [ascii banner](http://www.network-science.de/ascii/)
 ### [googlesamples](https://github.com/googlesamples)
