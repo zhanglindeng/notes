@@ -30,6 +30,8 @@ pgrep <name> | xargs kill -s 9
 - `uname -r`
 - `uname -a`
 - `cat /proc/version`
+- `cat /etc/issue`
+- `cat /etc/redhat-release` (redhat/centos)
 
 ### ubuntu 修改时区
 ```
