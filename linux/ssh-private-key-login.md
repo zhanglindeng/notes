@@ -1,3 +1,22 @@
+### 生成私钥
+```
+ssh-keygen -t rsa -C "your.email@example.com" -b 4096
+```
+
+### 配置 `~/.ssh/config`
+
+```
+# GitLab.com server
+Host gitlab.com
+RSAAuthentication yes
+IdentityFile ~/.ssh/config/private-key-filename-01
+
+# Private GitLab server
+Host gitlab.company.com
+RSAAuthentication yes
+IdentityFile ~/.ssh/config/private-key-filename
+```
+
 ### 配置私钥
 - 使用命令ssh-keygen -t rsa生成密钥，会生成一个私钥和一个公钥，在提示输入passphrase时如果不输入，直接回车，那么以后你登录服务器就不会验证密码，否则会要求你输入passphrase，默认会将私钥放在/root/.ssh/id_rsa公钥放在
 /root/.ssh/id_rsa.pub。
