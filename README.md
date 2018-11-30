@@ -1,5 +1,6 @@
 # notes
 
+### [Git刪除大文件和歷史記錄](http://www.cnblogs.com/shines77/p/3460274.html)
 ### [	IPdeny country block downloads](http://www.ipdeny.com/ipblocks/)
 ### [简繁体转换](https://phabricator.wikimedia.org/source/mediawiki/browse/wmf%252F1.32.0-wmf.20/languages/data/ZhConversion.php)
 ### [laravel qrcode](https://www.simplesoftware.io/docs/simple-qrcode/zh)
