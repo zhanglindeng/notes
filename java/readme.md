@@ -1,3 +1,27 @@
+### 安装 maven
+去 http://maven.apache.org/ 下载bin文件apache-maven-3.6.0-bin.tar.gz
+```
+$ tar -zxvf apache-maven-3.6.0-bin.tar.gz
+$ mv apache-maven-3.6.0 /usr/loca/maven
+```
+设置M2_HOME
+```
+$ sudo vim /etc/profile
+```
+添加
+```
+export M2_HOME=/usr/local/maven
+export PATH=$PATH:$M2_HOME/bin
+```
+更新生效
+```
+$ source /etc/profile
+```
+验证
+```
+$ mvn -v
+```
+
 ### CentOS 设置时区
 ```
 sudo timedatectl set-timezone Asia/Shanghai
