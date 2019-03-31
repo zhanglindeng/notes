@@ -1,3 +1,12 @@
+### CentOS 设置时区
+```
+sudo timedatectl set-timezone Asia/Shanghai
+```
+or
+```
+cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
+```
+
 ### CentOS 安装 JDK
 去oracle官网下载jdk
 ```
