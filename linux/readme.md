@@ -1,3 +1,8 @@
+### grep查找文件是否有BOM
+```
+grep -rl $'\xEF\xBB\xBF' .
+```
+
 ### Linux 流量查看统计工具
 https://www.zhihu.com/question/19862245
 
