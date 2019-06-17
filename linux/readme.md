@@ -1,3 +1,8 @@
+### 刪除文件的BOM
+```
+find . -type f -exec sed '1s/^\xEF\xBB\xBF//' -i {} \;
+```
+
 ### grep查找文件是否有BOM
 ```
 grep -rl $'\xEF\xBB\xBF' .
