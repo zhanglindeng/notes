@@ -1,3 +1,12 @@
+### centos7 安裝git2
+```sudo yum remove git
+sudo yum -y install  https://centos7.iuscommunity.org/ius-release.rpm
+sudo yum -y install  git2u-all
+git --version
+
+```
+
+
 ### 刪除文件的BOM
 ```
 find . -type f -exec sed '1s/^\xEF\xBB\xBF//' -i {} \;
