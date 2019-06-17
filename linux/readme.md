@@ -1,11 +1,37 @@
+### centos7.4+ yum安裝nginx
+
+參考：http://nginx.org/en/linux_packages.html#RHEL-CentOS
+
+**添加 `/etc/yum.repos.d/nginx.repo`**
+```
+[nginx-stable]
+name=nginx stable repo
+baseurl=http://nginx.org/packages/centos/$releasever/$basearch/
+gpgcheck=1
+enabled=1
+gpgkey=https://nginx.org/keys/nginx_signing.key
+
+[nginx-mainline]
+name=nginx mainline repo
+baseurl=http://nginx.org/packages/mainline/centos/$releasever/$basearch/
+gpgcheck=1
+enabled=0
+gpgkey=https://nginx.org/keys/nginx_signing.key
+```
+
+**安裝**
+```
+sudo yum install nginx
+```
+
 ### centos7 安裝git2
-```sudo yum remove git
+```
+sudo yum remove git
 sudo yum -y install  https://centos7.iuscommunity.org/ius-release.rpm
 sudo yum -y install  git2u-all
 git --version
 
 ```
-
 
 ### 刪除文件的BOM
 ```
