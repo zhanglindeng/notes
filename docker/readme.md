@@ -1,5 +1,10 @@
 # docker
 
+### 刪除 none 的 image
+```
+docker rmi $(docker images --filter "dangling=true" -q --no-trunc)
+```
+
 ### 私有仓库
 [参考网页](https://www.cnblogs.com/fengzheng/p/5168951.html)
 
