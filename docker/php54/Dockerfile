@@ -5,6 +5,7 @@ FROM centos:7
 RUN \
     yum -y update \
     && yum -y install --setopt=tsflags=nodocs \
+    epel-release \
     php \
     php-gd \
     php-mysql \
