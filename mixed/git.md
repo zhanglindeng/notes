@@ -1,5 +1,21 @@
 # git
 
+## git patch
+
+### 最后 n 次的 patch
+- n 次数
+- o 保存目录
+
+如生成最后3次提交的patch
+```bash
+git format-patch -o patch -3
+```
+
+### 应用 patch
+```bash
+git am patch/*.patch
+```
+
 ### 修改已提交的user.name和user.email
 ```sh
 #!/bin/sh
