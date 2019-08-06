@@ -1,3 +1,34 @@
+# CentOS 7 安裝 wkhtmltopdf
+
+### 官網下載 RPM 包
+```
+wget https://downloads.wkhtmltopdf.org/0.12/0.12.5/wkhtmltox-0.12.5-1.centos7.x86_64.rpm
+```
+
+### 依賴安裝
+```
+yum install -y libpng
+yum install -y libjpeg
+yum install -y openssl
+yum install -y icu
+yum install -y libX11
+yum install -y libXext
+yum install -y libXrender
+yum install -y xorg-x11-fonts-Type1
+yum install -y xorg-x11-fonts-75dpi
+```
+
+### 安裝
+```
+rpm -Uvh wkhtmltox-0.12.5-1.centos7.x86_64.rpm
+```
+
+### 中文字體亂碼
+從 Windows 系統字體中複製字體文件到 `/usr/share/fonts` 目錄下，如：
+
+- simsun.ttc 宋體
+- msyh.ttf 微軟雅黑
+
 # Ubuntu 16.04 安装 wkhtmltopdf 经历
 
 
