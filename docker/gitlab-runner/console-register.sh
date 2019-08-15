@@ -1,0 +1,11 @@
+sudo docker exec gitlab-runner gitlab-runner register \
+  --non-interactive \
+  --executor "docker" \
+  --docker-volumes /var/run/docker.sock:/var/run/docker.sock \
+  --docker-image docker:stable \
+  --url "https://gitlab.com/" \
+  --registration-token "BWnRYmeLzigfosZyzu43" \
+  --name "console" \
+  --tag-list "console" \
+  --run-untagged="true" \
+  --locked="false"
