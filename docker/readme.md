@@ -1,5 +1,61 @@
 # docker
 
+## CentOS 安装 Docker
+
+#### docker
+
+参考网址：https://docs.docker.com/install/linux/docker-ce/centos/
+
+```
+$ sudo yum install -y yum-utils \
+  device-mapper-persistent-data \
+  lvm2
+$ sudo yum-config-manager \
+    --add-repo \
+    https://download.docker.com/linux/centos/docker-ce.repo
+$ yum list docker-ce --showduplicates | sort -r
+$ sudo yum install docker-ce docker-ce-cli containerd.io
+$ sudo systemctl start docker
+$ sudo docker run hello-world
+```
+- 开机启动docker `sudo systemctl enable docker`
+- 启动docker `sudo systemctl start docker`
+- 查看docker状态 `sudo systemctl status docker`
+- 重启docker `sudo systemctl restart docker`
+- 停止docker `sudo systemctl stop docker`
+- 查看运行的container `sudo docker ps -a`
+
+#### docker compose
+ 
+參考網址：https://docs.docker.com/compose/install/
+
+- 最新穩定版本（2019-06-13）：`1.24.0`
+
+下載文件：
+
+```
+sudo curl -L "https://github.com/docker/compose/releases/download/1.24.0/docker-compose-$(uname -s)-$(uname -m)" \
+ -o /usr/local/bin/docker-compose
+```
+
+添加執行權限：
+
+```
+sudo chmod +x /usr/local/bin/docker-compose
+```
+
+檢查是否安裝成功：
+
+```
+docker-compose --version
+```
+
+顯示類似下面的信息表示安裝成功
+```
+docker-compose version 1.24.0, build 0aa59064
+```
+
+
 ### 使用 docker php-fpm 示例
 
 > 以 `php-fpm 7.1` 为例
