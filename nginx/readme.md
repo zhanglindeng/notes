@@ -1,5 +1,11 @@
 ### [在线生成配置文件](https://nginxconfig.io/)
 
+### certbot 指定 nginx 配置文件路径
+- let's encrypt
+```
+certbot renew --nginx --nginx-server-root=/usr/local/nginx/conf
+```
+
 ### docker 代理
 ```
 server {
