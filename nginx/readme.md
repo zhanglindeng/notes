@@ -1,5 +1,30 @@
 ### [在线生成配置文件](https://nginxconfig.io/)
 
+### docker 代理
+```
+server {
+	listen 80;
+	server_name abc.domain.com;
+
+	gzip on;
+	client_max_body_size 10m;
+	charset UTF-8;
+
+	access_log /var/log/nginx/abc.domain.com.access.log;
+	error_log /var/log/nginx/abc.domain.com.error.log;
+
+	location / {
+		proxy_set_header X-Real-IP $remote_addr;
+		proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+		proxy_set_header Host $http_host;
+		proxy_set_header X-Forwarded-Proto $scheme;
+		proxy_read_timeout 600;
+		proxy_redirect off;
+		proxy_pass http://127.0.0.1:8080;
+	}
+}
+```
+
 ### 隐藏版本号
 ```
 http {
