@@ -1,0 +1,87 @@
+./configure \
+    --prefix=/usr/local/php8 \
+    --with-config-file-path=/etc/php8 \
+    --with-zlib-dir \
+    --enable-mbstring \
+    --enable-xmlreader \
+    --enable-xmlwriter \
+    --enable-soap \
+    --enable-calendar \
+    --with-curl \
+    --with-zlib \
+    --with-pdo-sqlite \
+    --with-pdo-mysql \
+    --with-mysqli \
+    --with-mysql-sock \
+    --enable-mysqlnd \
+    --with-bz2 \
+    --with-zlib \
+    --enable-sockets \
+    --enable-sysvsem \
+    --enable-sysvshm \
+    --enable-pcntl \
+    --enable-mbregex \
+    --enable-exif \
+    --enable-bcmath \
+    --with-mhash \
+    --with-openssl \
+    --enable-ftp \
+    --with-kerberos \
+    --with-gettext \
+    --with-xsl \
+    --enable-fpm \
+    --with-fpm-user=php-fpm \
+    --with-fpm-group=php-fpm \
+    --with-fpm-systemd
+
+问题1：https://www.cnblogs.com/cndavidwang/p/12343847.html
+
+启动 php-fpm 错误：
+6月 26 22:43:58 MiWiFi-R4AC-srv php-fpm[7807]: [26-Jun-2020 22:43:58] ERROR: failed to open error_log (/usr/local/php8/var/log/php-fpm.log): Read-only file system (30)
+6月 26 22:43:58 MiWiFi-R4AC-srv php-fpm[7807]: [26-Jun-2020 22:43:58] ERROR: failed to post process the configuration
+6月 26 22:43:58 MiWiFi-R4AC-srv php-fpm[7807]: [26-Jun-2020 22:43:58] ERROR: FPM initialization failed
+
+解决办法：
+注释掉：php-fpm.service 中的 ProtectSystem=full
+重新加载 service 文件：systemctl daemon-reload
+
+
+PHP 7.4
+
+./configure \
+    --prefix=/usr/local/php \
+    --with-config-file-path=/etc/php \
+    --with-zlib-dir \
+    --enable-mbstring \
+    --enable-xmlreader \
+    --enable-xmlwriter \
+    --enable-soap \
+    --enable-calendar \
+    --with-curl \
+    --with-zlib \
+    --with-pdo-sqlite \
+    --with-pdo-mysql \
+    --with-mysqli \
+    --with-mysql-sock \
+    --enable-mysqlnd \
+    --with-bz2 \
+    --with-zlib \
+    --enable-sockets \
+    --enable-sysvsem \
+    --enable-sysvshm \
+    --enable-pcntl \
+    --enable-mbregex \
+    --enable-exif \
+    --enable-bcmath \
+    --with-mhash \
+    --with-openssl \
+    --enable-ftp \
+    --with-kerberos \
+    --with-gettext \
+    --with-xsl \
+    --enable-fpm \
+    --with-fpm-user=php-fpm \
+    --with-fpm-group=php-fpm \
+    --with-fpm-systemd
+
+php8 配合 nginx 出现 502 错误，没有权限，而 php7 正常
