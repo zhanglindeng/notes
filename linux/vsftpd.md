@@ -86,9 +86,15 @@ tcp_wrappers=YES
 idle_session_timeout=600
 
 # 如果 client与 Server 间的数据传送在 180 秒内都无法传送成功，那 Client的联机就会被我们的 vsftpd 强制剔除！
-data_connection_timeout=180
+# data_connection_timeout=180
 
 ```
+
+### 注意问题
+> 在 `CentOS Linux release 7.6.1810 (Core)` 上出现的
+
+- 登录报 `530 Login incorrect` 错误，需要把 `/etc/pam.d/vsftpd` 中的 `pam_shells.so` 改为 `pam_nologin.so`
+
 
 ### 用户配置（本地用户模式）
 
