@@ -1,5 +1,9 @@
 # MySQL
 
+### 复制表
+- 复制表结构：`CREATE TABLE new_table_name LIKE table_name; `
+- 导入数据：`INSERT INTO new_table_name SELECT * FROM table_name;`
+
 ### my.ini
 ```
 [client]
