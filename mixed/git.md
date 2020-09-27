@@ -1,5 +1,10 @@
 # git
 
+## 推送本地分支到远端服务器
+```bash
+git push origin 本地分支:远程分支
+```
+
 ## CentOS 7 编译安装 git2
 ### 安装依赖
 ```
@@ -29,7 +34,17 @@ source /etc/bashrc
 
 如生成最后3次提交的patch
 ```bash
-git format-patch -o patch -3
+git format-patch -o patch_dir -3
+```
+
+### 兩次 commit 之間的 patch （不包括r1的）
+```bash
+git format-patch r1..r2 -o patch_dir
+```
+
+### 生成某個 commit 后的 patch（不包括r1的）
+```bash
+git format-patch r1 -o patch_dir
 ```
 
 ### 应用 patch
