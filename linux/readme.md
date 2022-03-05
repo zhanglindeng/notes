@@ -27,8 +27,8 @@ sudo yum install nginx
 ### centos7 安裝git2
 ```
 sudo yum remove git
-sudo yum -y install  https://centos7.iuscommunity.org/ius-release.rpm
-sudo yum -y install  git2u-all
+sudo yum install https://packages.endpointdev.com/rhel/7/os/x86_64/endpoint-repo.x86_64.rpm
+sudo yum install git
 git --version
 
 ```
